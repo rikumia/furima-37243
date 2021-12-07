@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="w8ZqJfblChgEpbfgyRoL" name="ページ1">
+        <mxGraphModel dx="540" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="88" value="item" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="50" width="160" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="user_id&#10;item_name&#10;item_explanation&#10;category&#10;product_condition&#10;shipping_area&#10;days_to_ship&#10;price&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="88" vertex="1">
+                    <mxGeometry y="26" width="160" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="address" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="279" width="160" height="146" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="oder_id&lt;br&gt;postal_code&lt;br&gt;prefectures&lt;br&gt;city&lt;br&gt;address_line2&lt;br&gt;address_line1&lt;br&gt;tell&lt;br&gt;&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="92">
+                    <mxGeometry y="26" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="user" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="50" width="140" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="nickname&#10;email&#10;encarypted_password&#10;family_name&#10;frist_name&#10;famiry_nameカナ&#10;frist_nameカナ&#10;birthday&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="96" vertex="1">
+                    <mxGeometry y="26" width="140" height="134" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="order" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="280" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" style="edgeStyle=none;html=1;" edge="1" parent="1" target="96">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="99" as="sourcePoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;entryX=-0.031;entryY=0.847;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="89">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="200" y="210" as="sourcePoint"/>
+                        <mxPoint x="280" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" value="user_id&lt;br&gt;item_id&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="310" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;endFill=1;exitX=0.057;exitY=1.022;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="99" target="100">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="130" y="220" as="sourcePoint"/>
+                        <mxPoint x="160" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;entryX=0.094;entryY=1.04;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="89">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="280" y="320" as="sourcePoint"/>
+                        <mxPoint x="430" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="116" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="100">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="330" y="320" as="sourcePoint"/>
+                        <mxPoint x="430" y="401" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
