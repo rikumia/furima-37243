@@ -12,11 +12,11 @@ class Item < ApplicationRecord
   validates :image, presence: true
   validates :item_name, presence: true
   validates :item_explanation, presence: true
-  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :product_condition_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :pay_for_shipping_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :shipping_area_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :days_to_ship_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :price, presence: true, format: { with: /\A[0-9]+\z/, message: 'is invalid. Input half-width characters' },
-                    numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: 'is out of setting range' }
+  validates :category_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :product_condition_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :pay_for_shipping_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :shipping_area_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :days_to_ship_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :price, presence: true, format: { with: /\A[0-9]+\z/, message: 'は半角数字で入力してください' },
+                    numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: 'は300円から10000000円までで入力してください' }
 end
