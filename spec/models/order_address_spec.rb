@@ -47,8 +47,7 @@ RSpec.describe OrderAddress, type: :model do
       it 'postal_codeが空では購入できない' do
         @order_address.postal_code = ''
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Postal code can't be blank",
-                                                               'Postal code is invalid. Enter it as follows (e.g. 123-4567)')
+        expect(@order_address.errors.full_messages).to include("Postal code can't be blank")
       end
       it 'postal_codeが半角ハイフンを含む形でなければ購入できない' do
         @order_address.postal_code = '12345678'
@@ -78,7 +77,7 @@ RSpec.describe OrderAddress, type: :model do
       it 'tellが空では購入出来ない' do
         @order_address.tell = ''
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Tell can't be blank", 'Tell is invalid. Input only number')
+        expect(@order_address.errors.full_messages).to include("Tell can't be blank")
       end
       it 'tellが9桁以下では購入できない' do
         @order_address.tell = '090111122'
@@ -86,7 +85,7 @@ RSpec.describe OrderAddress, type: :model do
         expect(@order_address.errors.full_messages).to include('Tell is invalid. Input only number')
       end
       it 'tellが12桁以上では購入できない' do
-        @order_address.tell = '090111122'
+        @order_address.tell = '090111122222'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Tell is invalid. Input only number')
       end
